@@ -26,6 +26,7 @@ def set_score():        # game variables in a function (makes it possible to res
         "rounds": 0,
         "result": "no_matches_fought"
 }
+
 set_score()     # on game start reset the score
 
 input_options = ["r", "p", "s", "q", "z", "1", "2", "3"]        # usable things
