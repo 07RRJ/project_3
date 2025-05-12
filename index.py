@@ -15,7 +15,7 @@ def game_banner():      # header
 def game_instructions():        # shows poossible key imputs (menu)
     system("cls")
     game_banner()
-    print(f"{bcolors.RED}r/1 - rock\n{bcolors.BLUE}p/2 - paper\n{bcolors.GREEN}s/3 - scissors\n{bcolors.DEFAULT}z/0 - restart\nq - quit\n")
+    print(f"Choose one of the options below:\n{bcolors.RED}* r/1 - rock\n{bcolors.BLUE}* p/2 - paper\n{bcolors.GREEN}* s/3 - scissors\n{bcolors.DEFAULT}* z/0 - restart\n* q - quit\n")
 
 def set_score():        # game variables in a function (makes it possible to reset in a neat way)
     global stats
@@ -79,3 +79,4 @@ while True:     # main loop
             print(f"{stats['result']}\n\n{bcolors.GREEN}wins{bcolors.DEFAULT} {stats['wins']}, {bcolors.RED}losses{bcolors.DEFAULT} {stats['losses']}, {bcolors.YELLOW}draws{bcolors.DEFAULT} {stats['draws']}, rounds {stats['rounds']}\n")
     else:
         game_instructions()     # if your input isnt in "input_options" display valid inputs aka the menu
+        print(f"{bcolors.GREEN}wins{bcolors.DEFAULT} {stats['wins']}, {bcolors.RED}losses{bcolors.DEFAULT} {stats['losses']}, {bcolors.YELLOW}draws{bcolors.DEFAULT} {stats['draws']}, rounds {stats['rounds']}\n")
