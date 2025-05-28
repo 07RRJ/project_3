@@ -15,7 +15,7 @@ def game_banner():      # header
 def game_instructions():        # shows poossible key imputs (menu)
     system("cls")
     game_banner()
-    print(f"Choose one of the options below:\n{bcolors.RED}* r/1 - rock\n{bcolors.BLUE}* p/2 - paper\n{bcolors.GREEN}* s/3 - scissors\n{bcolors.DEFAULT}* z/0 - restart\n* q - quit\n")
+    print(f"Choyose one of the options below:\n{bcolors.RED}* r/1 - rock\n{bcolors.BLUE}* p/2 - paper\n{bcolors.GREEN}* s/3 - scissors\n{bcolors.DEFAULT}* z/0 - restart\n* q - quit\n")
 
 def set_score():        # game variables in a function (makes it possible to reset in a neat way)
     global stats
@@ -30,10 +30,15 @@ def set_score():        # game variables in a function (makes it possible to res
 set_score()     # on game start reset the score
 
 input_options = ["r", "p", "s", "q", "z", "1", "2", "3"]        # usable things
+rps = [
+    ["r", 1], 
+    ["p", 2], 
+    ["s", 3]
+]
 
 game_instructions()
 while True:     # main loop
-    print(f"What do you chose? {bcolors.RED}\"R\"ock {bcolors.BLUE}\"P\"aper {bcolors.GREEN}\"S\"cissors{bcolors.DEFAULT}?")
+    print(f"What do you choose? {bcolors.RED}\"R\"ock {bcolors.BLUE}\"P\"aper {bcolors.GREEN}\"S\"cissors{bcolors.DEFAULT}?")
     your_choice = getwch().lower()
     system("cls")
     game_banner()
@@ -48,13 +53,13 @@ while True:     # main loop
             set_score()
 
         else:
-            if your_choice == "r" or your_choice == "1":        # changes your input to the correct display 🪨📄✂️ to understand better
+            if your_choice in rps[0]:        # changes your input to the correct display 🪨📄✂️ to understand better
                 your_display = "🪨"
                 your_display_name = f"{bcolors.RED}rock{bcolors.DEFAULT}"
-            elif your_choice == "p" or your_choice == "2":
+            elif your_choice in rps[1]:
                 your_display = "📄"
                 your_display_name = f"{bcolors.BLUE}paper{bcolors.DEFAULT}"
-            elif your_choice == "s" or your_choice == "3":
+            elif your_choice in rps[2]:
                 your_display = "✂️"
                 your_display_name = f"{bcolors.GREEN}scissors{bcolors.DEFAULT}"
 
