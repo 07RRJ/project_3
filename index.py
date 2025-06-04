@@ -31,9 +31,9 @@ set_score()     # on game start reset the score
 
 input_options = ["r", "p", "s", "q", "z", "1", "2", "3"]        # usable things
 rps = [
-    ["r", 1], 
-    ["p", 2], 
-    ["s", 3]
+    ["r", "1"], 
+    ["p", "2"], 
+    ["s", "3"]
 ]
 
 game_instructions()
